@@ -9,7 +9,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Switch } from "@/components/ui/switch"
 import { Calendar, Clock, MoreVertical, Plus, ChevronDown, ChevronUp, Settings, Trash2, Image, Palette, Edit, Share2, ChevronRight, ChevronLeft, RotateCcw, Crown, HelpCircle, Send, FileText } from "lucide-react"
-import { format, startOfDay, eachDayOfInterval, isSameDay, startOfMonth, endOfMonth, getDay } from "date-fns"
+import { format, startOfDay, eachDayOfInterval, isSameDay, startOfMonth, endOfMonth, getDay, addMonths, subMonths } from "date-fns"
 import { ptBR, enUS, es, fr, de, it, ja, zhCN } from "date-fns/locale"
 import {
   DropdownMenu,
@@ -165,356 +165,153 @@ const motivationalQuotes = [
 const helpKnowledgeBase = [
   {
     keywords: ["recaída", "recai", "voltei", "falhei", "erro", "caí", "cedi"],
-    response: `**Recaídas: Como Transformar Falhas em Aprendizado**
+    response: `Olá, amigo. Primeiro, respire fundo. Sei que você está se sentindo mal agora, mas quero que saiba: recaídas NÃO significam que você fracassou. Elas são parte natural do processo de recuperação, e a maioria das pessoas precisa de várias tentativas antes de conseguir.
 
-Primeiro, respire fundo. Recaídas NÃO significam fracasso total - são parte natural do processo de recuperação. Estudos mostram que a maioria das pessoas precisa de 5-7 tentativas antes de conseguir superar um vício definitivamente.
+**Por que isso aconteceu?**
+Seu cérebro criou caminhos neurais fortes ao longo do tempo. Quebrar esses padrões leva tempo e paciência. Pode ter sido um gatilho que você ainda não identificou, ou simplesmente um momento de fraqueza - e tudo bem.
 
-**Por que recaídas acontecem:**
-• **Neuroplasticidade**: Seu cérebro criou caminhos neurais fortes ao longo do tempo. Quebrar esses padrões leva tempo
-• **Gatilhos não identificados**: Situações, emoções ou ambientes que você ainda não reconheceu
-• **Expectativas irreais**: Esperar perfeição desde o início cria pressão excessiva
-• **Falta de estratégias alternativas**: Não ter um "plano B" quando a vontade surge
+**O que fazer AGORA:**
+1. **Pare de se culpar** - Autocrítica excessiva só piora as coisas
+2. **Anote o que aconteceu** - Onde estava? Como se sentia? O que aconteceu antes?
+3. **Identifique o gatilho** - Foi estresse? Tédio? Solidão? Ambiente?
+4. **Reinicie IMEDIATAMENTE** - Quanto mais rápido voltar, menor o impacto
+5. **Ajuste sua estratégia** - Use o que aprendeu para se fortalecer
 
-**O que fazer AGORA (protocolo de emergência):**
-1. **Não entre em espiral de culpa** - Autocrítica excessiva aumenta chances de nova recaída
-2. **Documente o momento** - Anote: onde estava, como se sentia, o que aconteceu antes
-3. **Identifique o gatilho real** - Foi estresse? Tédio? Ambiente? Pessoa específica?
-4. **Reinicie IMEDIATAMENTE** - Quanto mais rápido voltar, menor o impacto psicológico
-5. **Ajuste sua estratégia** - Use o que aprendeu para fortalecer seu plano
-
-**Técnicas comprovadas para prevenir próxima recaída:**
-• **Mapeamento de gatilhos**: Crie uma lista de situações de risco e planos específicos para cada
-• **Rede de apoio ativa**: Tenha 3 pessoas que pode ligar em momentos críticos
-• **Substituição comportamental**: Tenha atividades prontas para fazer quando sentir vontade
-• **Mindfulness**: Pratique observar a vontade sem julgamento - ela passa em 10-15 minutos
-
-**Lembre-se**: Cada recaída te ensina algo novo sobre seus padrões. Use esse conhecimento! 💪`
+**Lembre-se:** Cada recaída te ensina algo novo sobre você mesmo. Você não voltou ao início - você tem toda a experiência que ganhou até aqui. Levante-se e continue! 💪`
   },
   {
     keywords: ["vontade", "desejo", "tentação", "difícil", "resistir", "urgência", "compulsão"],
-    response: `**Dominando a Vontade: Técnicas Científicas de Controle**
+    response: `Entendo perfeitamente o que você está sentindo agora. A vontade é intensa, mas tenho uma boa notícia: ela é temporária. Estudos mostram que a intensidade máxima dura apenas 10-15 minutos.
 
-A vontade é uma onda - ela sobe, atinge o pico e desce. Estudos mostram que a intensidade máxima dura apenas 10-15 minutos. Seu objetivo é surfar essa onda sem ceder.
-
-**Entendendo a neurociência da vontade:**
-• **Dopamina**: Seu cérebro antecipa o prazer e libera dopamina ANTES do ato
-• **Ciclo de recompensa**: Quanto mais você cede, mais forte fica o circuito neural
-• **Janela crítica**: Os primeiros 5 minutos são os mais difíceis - depois fica mais fácil
-
-**Técnicas imediatas (use AGORA):**
+**Técnicas para AGORA (use imediatamente):**
 
 **1. Técnica dos 10 Minutos**
-- Diga: "Vou esperar 10 minutos"
-- Configure um timer
-- Faça QUALQUER outra coisa nesse tempo
-- 80% das vontades passam nesse período
+Diga para si mesmo: "Vou esperar 10 minutos". Configure um timer e faça QUALQUER outra coisa. 80% das vontades passam nesse período.
 
-**2. Respiração 4-7-8 (comprovada cientificamente)**
+**2. Respiração 4-7-8**
 - Inspire pelo nariz contando até 4
-- Segure a respiração contando até 7
+- Segure contando até 7
 - Expire pela boca contando até 8
 - Repita 4 vezes
-- Ativa o sistema nervoso parassimpático (relaxamento)
+Isso acalma seu sistema nervoso naturalmente.
 
-**3. Técnica HALT (Check-in emocional)**
-Pergunte-se: Estou...
-- **H**ungry (com fome)?
-- **A**ngry (com raiva)?
-- **L**onely (sozinho)?
-- **T**ired (cansado)?
-Se sim para qualquer um, resolva ISSO primeiro - não é realmente sobre o vício
+**3. Pergunte-se: Estou com fome, raiva, sozinho ou cansado?**
+Muitas vezes a vontade não é realmente sobre o vício - é sobre uma necessidade não atendida. Resolva ISSO primeiro.
 
-**4. Visualização de Consequências**
-- Feche os olhos
-- Visualize VIVIDAMENTE como se sentirá DEPOIS de ceder
-- Culpa, vergonha, perda de progresso
-- Agora visualize como se sentirá DEPOIS de resistir
-- Orgulho, força, progresso mantido
+**4. Exercício físico intenso**
+20 flexões, polichinelos, ou caminhe rapidamente por 10 minutos. O exercício interrompe o circuito mental.
 
-**5. Distração Física Intensa**
-- 20 flexões ou polichinelos
-- Banho gelado de 2 minutos
-- Caminhar rapidamente por 10 minutos
-- Exercício físico interrompe o circuito mental
+**5. Ligue para alguém**
+Não precisa falar sobre a vontade - apenas conecte-se com outra pessoa.
 
-**6. Técnica do "Surfar a Onda"**
-- Não lute contra a vontade
-- Observe-a como um cientista
-- "Interessante, estou sentindo vontade agora"
-- Note como ela muda de intensidade
-- Aceite que ela está ali, mas você não precisa agir
-
-**Estratégias preventivas (use DIARIAMENTE):**
-• **Manhã**: Reforce seu "porquê" - releia seus motivos
-• **Tarde**: Check-in emocional - como está se sentindo?
-• **Noite**: Planeje o dia seguinte - identifique possíveis gatilhos
-
-**Lembre-se**: A vontade é temporária. Sua determinação é permanente. Você JÁ resistiu antes - pode fazer de novo! 🔥`
+Você já resistiu antes. Pode fazer de novo. A vontade vai passar - sua determinação não. 🔥`
   },
   {
     keywords: ["ansiedade", "ansioso", "nervoso", "estresse", "estressado", "preocupado", "tenso"],
-    response: `**Ansiedade e Estresse: Gerenciamento Profundo**
+    response: `Percebo que você está passando por um momento difícil. Ansiedade e estresse são os gatilhos #1 para recaídas, porque nosso cérebro busca alívio rápido. Vamos trabalhar nisso juntos.
 
-Ansiedade e estresse são os gatilhos #1 para recaídas. Por quê? Porque seu cérebro busca alívio rápido, e o vício era sua "solução" antiga. Vamos criar novas soluções mais saudáveis.
+**Alívio IMEDIATO (0-5 minutos):**
 
-**Entendendo a conexão ansiedade-vício:**
-• **Ciclo vicioso**: Ansiedade → Vício → Alívio temporário → Culpa → Mais ansiedade
-• **Tolerância ao estresse**: Seu cérebro precisa reaprender a lidar com desconforto
-• **Regulação emocional**: Vícios eram sua forma de "desligar" emoções difíceis
-
-**Técnicas de alívio imediato (0-5 minutos):**
-
-**1. Grounding 5-4-3-2-1**
+**Técnica 5-4-3-2-1 (Grounding)**
 Identifique em voz alta:
 - 5 coisas que você VÊ
 - 4 coisas que você TOCA
 - 3 coisas que você OUVE
 - 2 coisas que você CHEIRA
 - 1 coisa que você SABOREIA
-*Por que funciona*: Traz você de volta ao presente, interrompe espiral ansiosa
 
-**2. Respiração Diafragmática**
-- Mão no peito, mão na barriga
-- Inspire profundamente pelo nariz (barriga sobe, peito não)
-- Expire lentamente pela boca
-- 5 minutos reduzem cortisol (hormônio do estresse) em 30%
+Isso traz você de volta ao presente e interrompe a espiral ansiosa.
 
-**3. Técnica do Gelo**
-- Segure gelo na mão por 30 segundos
-- Ou lave o rosto com água gelada
-- Choque sensorial interrompe ataque de ansiedade
+**Respiração Profunda**
+Mão no peito, mão na barriga. Inspire profundamente pelo nariz (barriga sobe, peito não). Expire lentamente pela boca. 5 minutos disso reduzem o cortisol (hormônio do estresse) em 30%.
 
-**Estratégias de médio prazo (diárias):**
+**Técnica do Gelo**
+Segure gelo na mão por 30 segundos ou lave o rosto com água gelada. O choque sensorial interrompe o ataque de ansiedade.
 
-**1. Exercício Físico (ESSENCIAL)**
-- 30 minutos de atividade moderada
-- Libera endorfina, serotonina, dopamina naturalmente
-- Reduz ansiedade em até 50% (comprovado)
-- Caminhada rápida já funciona!
+**Para o longo prazo:**
+- Exercício físico diário (30 min) - reduz ansiedade em até 50%
+- Meditação/Mindfulness (comece com 5 min/dia)
+- Journaling antes de dormir
+- Rotina de sono regular
 
-**2. Meditação/Mindfulness**
-- Comece com 5 minutos/dia
-- Apps: Headspace, Calm, Insight Timer
-- Estudos: 8 semanas de prática reduzem ansiedade em 40%
-- Foco: observar pensamentos sem julgamento
+Se a ansiedade está interferindo muito na sua vida, considere buscar um psicólogo. Não há vergonha nisso - é cuidar de você.
 
-**3. Journaling (Escrita Terapêutica)**
-- 10 minutos antes de dormir
-- Escreva: "Hoje me senti... porque..."
-- Externalizar pensamentos reduz carga mental
-- Identifica padrões ao longo do tempo
-
-**4. Rotina de Sono**
-- Dormir/acordar no mesmo horário
-- Sem telas 1h antes de dormir
-- Quarto escuro, fresco, silencioso
-- Sono ruim = ansiedade 3x maior
-
-**Estratégias de longo prazo:**
-
-**1. Terapia Cognitivo-Comportamental (TCC)**
-- Mais eficaz para ansiedade + vícios
-- Ensina a identificar pensamentos distorcidos
-- Cria estratégias personalizadas
-- Considere buscar um psicólogo
-
-**2. Rede de Apoio**
-- Compartilhe com pessoas de confiança
-- Grupos de apoio (online ou presencial)
-- Não carregue tudo sozinho
-
-**3. Limite Cafeína e Açúcar**
-- Ambos aumentam ansiedade
-- Substitua por água, chás calmantes
-- Alimentação equilibrada = mente equilibrada
-
-**Quando buscar ajuda profissional:**
-- Ansiedade interfere em atividades diárias
-- Ataques de pânico frequentes
-- Pensamentos intrusivos constantes
-- Isolamento social
-
-**Lembre-se**: Ansiedade não é fraqueza. É seu sistema nervoso em alerta. Você pode treiná-lo a se acalmar. 🌟`
+Você não está sozinho. Estou aqui com você. 🌟`
   },
   {
     keywords: ["motivação", "desanimo", "desanimado", "cansado", "desistir", "sem forças", "perdido"],
-    response: `**Recuperando a Motivação: Estratégias Psicológicas Profundas**
+    response: `Sei que você está se sentindo esgotado. Perder motivação é NORMAL e acontece com todo mundo. Mas deixa eu te contar um segredo: você não precisa de motivação para continuar - você precisa de determinação.
 
-Perder motivação é NORMAL e ESPERADO. Motivação é como uma onda - sobe e desce. O segredo não é ter motivação constante, mas ter SISTEMAS que funcionam mesmo sem motivação.
+**Reconecte com seu PORQUÊ:**
+Por que você começou essa jornada? Que dor você quer evitar? Que futuro você quer criar? Quem você quer se tornar? Escreva isso agora.
 
-**Por que a motivação desaparece:**
-• **Efeito novidade**: Empolgação inicial passa após 2-3 semanas
-• **Falta de resultados visíveis**: Mudanças internas demoram a aparecer externamente
-• **Fadiga de decisão**: Resistir constantemente cansa mentalmente
-• **Comparação**: Ver outros "perfeitos" nas redes sociais desmotiva
-
-**Mudança de mindset fundamental:**
-❌ "Preciso de motivação para continuar"
-✅ "Vou continuar até a motivação voltar"
-
-**Estratégias para reacender a chama:**
-
-**1. Reconecte com seu PORQUÊ profundo**
-Escreva respostas honestas:
-- Por que comecei essa jornada?
-- Que dor quero evitar?
-- Que futuro quero criar?
-- Quem eu quero me tornar?
-- Quem depende de mim?
-
-**2. Celebre Micro-Vitórias**
-Cada dia livre É uma conquista:
+**Celebre suas vitórias:**
 - 1 dia = Você tomou a decisão
 - 3 dias = Você superou o mais difícil
 - 1 semana = Você provou que consegue
 - 1 mês = Você mudou padrões de anos
-Comemore CADA marco!
 
-**3. Visualização do Futuro Eu**
-- Feche os olhos
-- Imagine você daqui a 1 ano, livre do vício
-- Como você se sente? Como se vê?
-- O que conquistou? Como as pessoas te veem?
-- Que oportunidades se abriram?
-- Esse futuro vale a luta de hoje?
+Cada dia livre É uma conquista. Não minimize isso.
 
-**4. Lista de Benefícios Tangíveis**
-Anote TUDO que melhorou:
-- Saúde física (mais energia, melhor sono)
-- Saúde mental (menos culpa, mais autoestima)
-- Financeiro (quanto economizou?)
-- Relacionamentos (quem se aproximou?)
-- Tempo (o que fez com horas recuperadas?)
+**Visualize seu futuro:**
+Feche os olhos. Imagine você daqui a 1 ano, livre do vício. Como você se sente? Como se vê? O que conquistou? Esse futuro vale a luta de hoje?
 
-**5. Transforme em Jogo (Gamificação)**
+**Transforme em jogo:**
 - Cada dia = +1 ponto
 - Cada semana = +10 pontos
 - Cada mês = +50 pontos
-- Crie recompensas para marcos
-- Use o dinheiro economizado para presentes
+Use o dinheiro economizado para se recompensar!
 
-**6. Conecte-se com Comunidade**
-- Grupos online de apoio
-- Fóruns (Reddit: r/addiction, r/stopdrinking, etc)
-- Compartilhe sua história
-- Inspire outros = se inspira também
+**Técnica "Só por hoje":**
+Não pense em "nunca mais". Pense em "só por hoje, não vou ceder". Amanhã, repita. Um dia de cada vez = anos de liberdade.
 
-**7. Documente a Jornada**
-- Tire foto no dia 1, 30, 60, 90
-- Escreva diário semanal
-- Grave vídeos para você mesmo
-- Ver progresso visual motiva MUITO
-
-**Técnica do "Só por hoje":**
-Não pense em "nunca mais"
-Pense em "só por hoje, não vou ceder"
-Amanhã, repita: "só por hoje"
-Um dia de cada vez = anos de liberdade
-
-**Quando a motivação falha, use DISCIPLINA:**
-- Motivação = sentimento (instável)
-- Disciplina = ação (estável)
-- Faça mesmo sem vontade
-- Ação cria motivação, não o contrário
-
-**Recompensas estratégicas:**
-Use o dinheiro/tempo economizado:
-- 1 semana: Algo pequeno que gosta
-- 1 mês: Jantar especial, roupa nova
-- 3 meses: Viagem curta, hobby novo
-- 1 ano: Algo que sempre quis
-
-**Lembre-se**: Você já chegou até aqui. Isso PROVA que você é capaz. Dias ruins não apagam dias bons. Continue! 💎`
+Você já chegou até aqui. Isso PROVA que você é capaz. Dias ruins não apagam dias bons. Continue, guerreiro! 💎`
   },
   {
     keywords: ["gatilho", "situação", "ambiente", "pessoas", "evitar", "trigger"],
-    response: `**Dominando Gatilhos: Guia Completo de Identificação e Prevenção**
-
-Gatilhos são estímulos que ativam o desejo pelo vício. Identificá-los e gerenciá-los é 80% do sucesso na recuperação.
+    response: `Ótimo que você está pensando em gatilhos! Identificá-los e gerenciá-los é 80% do sucesso na recuperação.
 
 **Tipos de gatilhos:**
+- **Emocionais**: estresse, ansiedade, tédio, solidão, até alegria
+- **Ambientais**: lugares, horários, objetos
+- **Sociais**: pessoas específicas, eventos, pressão de grupo
+- **Físicos**: cansaço, fome, sede, dor
 
-**1. Gatilhos Emocionais (mais comuns)**
-- Estresse, ansiedade, tédio
-- Solidão, tristeza, raiva
-- Até emoções positivas (celebração)
-
-**2. Gatilhos Ambientais**
-- Lugares específicos
-- Horários do dia
-- Objetos relacionados ao vício
-
-**3. Gatilhos Sociais**
-- Pessoas específicas
-- Eventos sociais
-- Pressão de grupo
-
-**4. Gatilhos Físicos**
-- Cansaço extremo
-- Fome, sede
-- Dor física
-
-**Exercício de Mapeamento (FAÇA AGORA):**
-
-Pegue papel e caneta. Para cada recaída ou vontade forte, anote:
-- **Quando**: Dia, hora
-- **Onde**: Local exato
-- **Com quem**: Sozinho ou acompanhado?
-- **Sentindo**: Emoção predominante
-- **Antes**: O que aconteceu 30min antes?
+**Exercício prático:**
+Para cada vontade forte, anote:
+- Quando (dia, hora)
+- Onde (local exato)
+- Com quem (sozinho ou acompanhado)
+- Sentindo (emoção predominante)
+- Antes (o que aconteceu 30min antes)
 
 Após 1 semana, você verá PADRÕES claros.
 
-**Estratégias por tipo de gatilho:**
+**Estratégias por tipo:**
 
-**Para Gatilhos Emocionais:**
-- **Estresse**: Respiração, exercício, meditação
-- **Tédio**: Lista de 10 atividades alternativas prontas
-- **Solidão**: Ligar para alguém, ir a lugar público
-- **Raiva**: Exercício intenso, socar travesseiro, escrever carta (não enviar)
+**Emocionais:**
+- Estresse → respiração, exercício, meditação
+- Tédio → lista de 10 atividades alternativas
+- Solidão → ligar para alguém, ir a lugar público
 
-**Para Gatilhos Ambientais:**
-- **Evite** lugares de risco nas primeiras semanas
-- **Mude rotas**: Vá por caminhos diferentes
-- **Remova objetos**: Tudo que lembra o vício
-- **Crie novos ambientes**: Reorganize quarto, mude decoração
+**Ambientais:**
+- Evite lugares de risco nas primeiras semanas
+- Mude rotas diárias
+- Remova objetos que lembram o vício
 
-**Para Gatilhos Sociais:**
-- **Comunique-se**: Avise pessoas próximas sobre sua jornada
-- **Estabeleça limites**: "Não vou a X lugar por enquanto"
-- **Tenha frase pronta**: "Não, obrigado. Estou bem assim"
-- **Saia de situações**: Não é covardia, é estratégia
+**Sociais:**
+- Comunique sua jornada para pessoas próximas
+- Tenha frase pronta: "Não, obrigado. Estou bem assim"
+- Não tenha medo de sair de situações de risco
 
-**Para Gatilhos Físicos:**
-- **Rotina de sono**: 7-9h por noite
-- **Alimentação regular**: Não pule refeições
-- **Hidratação**: 2L água/dia
-- **Exercício**: 30min/dia
-
-**Plano de Emergência (tenha SEMPRE):**
-
-**Se encontrar gatilho inesperado:**
-1. **Reconheça**: "Isso é um gatilho"
-2. **Respire**: 3 respirações profundas
-3. **Saia**: Fisicamente, se possível
-4. **Ligue**: Para alguém da rede de apoio
-5. **Distraia**: Atividade da lista preparada
-
-**Lista de Distração Emergencial (prepare AGORA):**
+**Plano de Emergência:**
+Tenha sempre pronto:
 - 3 pessoas para ligar
-- 5 atividades físicas (caminhar, flexões, etc)
+- 5 atividades físicas
 - 3 lugares seguros para ir
-- 2 hobbies que pode fazer imediatamente
-- 1 mantra pessoal ("Eu sou mais forte que isso")
+- 1 mantra pessoal
 
-**Técnica de Dessensibilização (avançado):**
-Após 30+ dias limpo:
-- Exponha-se gradualmente a gatilhos menores
-- Com rede de apoio presente
-- Prove para si mesmo que pode resistir
-- Aumenta confiança e reduz poder do gatilho
-
-**Lembre-se**: Gatilhos perdem força com o tempo. Cada vez que você resiste, o circuito neural enfraquece. Você está reprogramando seu cérebro! 🎯`
+Lembre-se: gatilhos perdem força com o tempo. Cada vez que você resiste, o circuito neural enfraquece. Você está reprogramando seu cérebro! 🎯`
   }
 ]
 
@@ -573,6 +370,9 @@ export default function Home() {
 
   // Estado para política de privacidade
   const [privacyDialogOpen, setPrivacyDialogOpen] = useState(false)
+
+  // Estado para navegação do calendário no balão
+  const [calendarViewDate, setCalendarViewDate] = useState<Date>(new Date())
 
   // Carregar dados salvos
   useEffect(() => {
@@ -637,6 +437,13 @@ export default function Home() {
     const formattedTime = `${String(selectedHour).padStart(2, '0')}:${String(selectedMinute).padStart(2, '0')}`
     setStartTime(formattedTime)
   }, [selectedHour, selectedMinute])
+
+  // Resetar calendarViewDate quando expandir um vício
+  useEffect(() => {
+    if (expandedId) {
+      setCalendarViewDate(new Date())
+    }
+  }, [expandedId])
 
   const resetDialog = () => {
     setCurrentStep(1)
@@ -799,8 +606,26 @@ export default function Home() {
       if (matchedTopic) {
         response = matchedTopic.response
       } else {
-        // Resposta genérica se não encontrar correspondência
-        response = "Entendo sua situação. Superar um vício é um desafio diário que requer determinação e estratégia.\n\n**Dicas gerais importantes:**\n\n1. **Identifique seus gatilhos** - Reconheça situações que despertam a vontade\n2. **Tenha um plano de ação** - Saiba o que fazer quando a vontade surgir\n3. **Busque apoio** - Compartilhe sua jornada com pessoas de confiança\n4. **Celebre vitórias** - Cada dia livre é uma conquista!\n5. **Seja gentil consigo** - Recaídas podem acontecer, o importante é não desistir\n\n💡 **Dica:** Tente ser mais específico sobre sua dificuldade (ex: 'estou com vontade', 'tive uma recaída', 'estou ansioso') para receber orientações mais direcionadas.\n\nVocê não está sozinho nessa jornada! 💪"
+        // Resposta genérica humanizada
+        response = `Entendo sua situação e estou aqui para te ajudar. Superar um vício é um desafio diário que requer determinação e estratégia.
+
+**Algumas orientações importantes:**
+
+1. **Identifique seus gatilhos** - Reconheça situações, emoções ou ambientes que despertam a vontade
+2. **Tenha um plano de ação** - Saiba exatamente o que fazer quando a vontade surgir
+3. **Busque apoio** - Compartilhe sua jornada com pessoas de confiança
+4. **Celebre cada vitória** - Cada dia livre é uma conquista real!
+5. **Seja gentil consigo mesmo** - Recaídas podem acontecer, o importante é não desistir
+
+💡 **Dica:** Tente ser mais específico sobre sua dificuldade. Por exemplo:
+- "Estou com vontade agora"
+- "Tive uma recaída"
+- "Estou me sentindo ansioso"
+- "Perdi a motivação"
+
+Assim posso te dar orientações mais direcionadas para sua situação específica.
+
+Você não está sozinho nessa jornada! Estou aqui para te apoiar. 💪`
       }
       
       setHelpMessages(prev => [...prev, { role: 'assistant', content: response }])
@@ -845,9 +670,8 @@ export default function Home() {
   }
 
   const getCalendarDays = (tracked: TrackedAddiction) => {
-    const now = new Date()
-    const currentMonth = startOfMonth(now)
-    const monthEnd = endOfMonth(now)
+    const currentMonth = startOfMonth(calendarViewDate)
+    const monthEnd = endOfMonth(calendarViewDate)
     
     const allDays = eachDayOfInterval({
       start: currentMonth,
@@ -858,6 +682,7 @@ export default function Home() {
     const emptyDays = Array(firstDayOfWeek).fill(null)
 
     const startDateTime = new Date(`${tracked.startDate}T${tracked.startTime}`)
+    const now = new Date()
 
     return {
       emptyDays,
@@ -916,6 +741,7 @@ export default function Home() {
   const dialogTextClass = themeMode === "dark" ? "text-gray-100" : "text-gray-900"
   const inputBgClass = themeMode === "dark" ? "bg-gray-700 border-gray-600 text-gray-100" : "bg-white border-gray-300 text-gray-900"
   const selectBgClass = themeMode === "dark" ? "bg-gray-700 text-gray-100" : "bg-gray-50 text-gray-900"
+  const buttonVariantClass = themeMode === "dark" ? "bg-gray-700 hover:bg-gray-600 text-gray-100 border-gray-600" : "bg-white hover:bg-gray-50 text-gray-900 border-gray-300"
 
   if (trackedAddictions.length === 0) {
     return (
@@ -1489,11 +1315,31 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <Calendar className={`w-6 h-6 ${textSecondaryClass}`} />
-                      <h3 className={`font-semibold ${textPrimaryClass} text-base`}>
-                        {format(new Date(), "MMMM yyyy", { locale: currentLocale })}
-                      </h3>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Calendar className={`w-6 h-6 ${textSecondaryClass}`} />
+                        <h3 className={`font-semibold ${textPrimaryClass} text-base`}>
+                          {format(calendarViewDate, "MMMM yyyy", { locale: currentLocale })}
+                        </h3>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setCalendarViewDate(subMonths(calendarViewDate, 1))}
+                          className={`h-8 w-8 p-0 ${themeMode === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
+                        >
+                          <ChevronLeft className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setCalendarViewDate(addMonths(calendarViewDate, 1))}
+                          className={`h-8 w-8 p-0 ${themeMode === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
+                        >
+                          <ChevronRight className="w-4 h-4" />
+                        </Button>
+                      </div>
                     </div>
                     
                     <div className="grid grid-cols-7 gap-1 sm:gap-2 mb-2">
@@ -1544,21 +1390,21 @@ export default function Home() {
                     <Button
                       onClick={() => handleOpenConfig(tracked)}
                       variant="outline"
-                      className={`h-12 px-4 ${themeMode === "dark" ? "border-gray-600 hover:bg-gray-600" : "border-gray-300"} ${textPrimaryClass} ${hoverBgClass}`}
+                      className={`h-12 px-4 ${buttonVariantClass}`}
                     >
                       <Settings className="w-5 h-5" />
                     </Button>
                     <Button
                       onClick={() => handleShareProgress(tracked)}
                       variant="outline"
-                      className={`h-12 px-4 ${themeMode === "dark" ? "border-gray-600 hover:bg-gray-600" : "border-gray-300"} ${textPrimaryClass} ${hoverBgClass}`}
+                      className={`h-12 px-4 ${buttonVariantClass}`}
                     >
                       <Share2 className="w-5 h-5" />
                     </Button>
                     <Button
                       onClick={() => handleResetAddiction(tracked.id)}
                       variant="outline"
-                      className="flex-1 border-orange-600 text-orange-600 hover:bg-orange-50 h-12 gap-2 text-base font-semibold"
+                      className={`flex-1 h-12 gap-2 text-base font-semibold ${themeMode === "dark" ? "border-orange-600 text-orange-400 hover:bg-orange-950" : "border-orange-600 text-orange-600 hover:bg-orange-50"}`}
                     >
                       <RotateCcw className="w-5 h-5" />
                       Reiniciar
@@ -1566,7 +1412,7 @@ export default function Home() {
                     <Button
                       onClick={() => handleDeleteAddiction(tracked.id)}
                       variant="outline"
-                      className="border-red-600 text-red-600 hover:bg-red-50 h-12 px-4"
+                      className={`h-12 px-4 ${themeMode === "dark" ? "border-red-600 text-red-400 hover:bg-red-950" : "border-red-600 text-red-600 hover:bg-red-50"}`}
                     >
                       <Trash2 className="w-4 h-4" />
                     </Button>
@@ -2017,7 +1863,7 @@ export default function Home() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setConfirmResetDialog(false)}>
+            <Button variant="outline" onClick={() => setConfirmResetDialog(false)} className={themeMode === "dark" ? "border-gray-600 hover:bg-gray-700" : ""}>
               Cancelar
             </Button>
             <Button onClick={confirmReset} className="bg-orange-600 hover:bg-orange-700">
@@ -2037,7 +1883,7 @@ export default function Home() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setConfirmDeleteDialog(false)}>
+            <Button variant="outline" onClick={() => setConfirmDeleteDialog(false)} className={themeMode === "dark" ? "border-gray-600 hover:bg-gray-700" : ""}>
               Cancelar
             </Button>
             <Button onClick={confirmDelete} className="bg-red-600 hover:bg-red-700">
@@ -2066,23 +1912,25 @@ export default function Home() {
 
             <div className="space-y-2">
               <Label className={dialogTextClass}>Ícone</Label>
-              <div className="grid grid-cols-8 gap-2">
-                {availableEmojis.map((emoji) => (
-                  <button
-                    key={emoji}
-                    onClick={() => setNewIcon(emoji)}
-                    className={`text-2xl p-2 rounded-lg border-2 transition-all ${
-                      newIcon === emoji
-                        ? "border-blue-500 bg-blue-50 scale-110"
-                        : themeMode === "dark"
-                        ? "border-gray-600 hover:border-gray-500"
-                        : "border-gray-300 hover:border-gray-400"
-                    }`}
-                  >
-                    {emoji}
-                  </button>
-                ))}
-              </div>
+              <Select value={newIcon} onValueChange={setNewIcon}>
+                <SelectTrigger className={inputBgClass}>
+                  <SelectValue>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl">{newIcon}</span>
+                      <span>Selecione um ícone</span>
+                    </div>
+                  </SelectValue>
+                </SelectTrigger>
+                <SelectContent className={dialogBgClass}>
+                  {availableEmojis.map((emoji) => (
+                    <SelectItem key={emoji} value={emoji} className={dialogTextClass}>
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">{emoji}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="space-y-2">
@@ -2136,7 +1984,7 @@ export default function Home() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setConfigDialogOpen(false)}>
+            <Button variant="outline" onClick={() => setConfigDialogOpen(false)} className={themeMode === "dark" ? "border-gray-600 hover:bg-gray-700" : ""}>
               Cancelar
             </Button>
             <Button onClick={handleSaveConfig} style={{ backgroundColor: appThemeColor }}>
@@ -2182,7 +2030,7 @@ export default function Home() {
             )}
           </div>
 
-          <div className="flex gap-2 pt-4 border-t">
+          <div className={`flex gap-2 pt-4 border-t ${borderClass}`}>
             <Input
               value={helpInput}
               onChange={(e) => setHelpInput(e.target.value)}
